@@ -127,14 +127,17 @@
                     <h2>Change Audio Playback Rate</h2>
                     <p>Use the buttons to change the playback rate of the audio:</p>
                     <audio id="myAudio" controls>
-                        <source src="your-audio-file.mp3" type="audio/mp3">
+                        <source src="https://quest.binary-studio.com/static/media/broadcast.8e762dc2c43d4e1cf790.mp3" type="audio/mp3">
                         Your browser does not support the audio element.
                     </audio>
                     <div>
+                        <button onclick="changePlaybackRate(0.2)">0.2x</button>
+                        <button onclick="changePlaybackRate(0.3)">0.3x</button>
+                        <button onclick="changePlaybackRate(0.4)">0.4x</button>
+                        <button onclick="changePlaybackRate(0.45)">0.45x</button>
                         <button onclick="changePlaybackRate(0.5)">0.5x</button>
+                        <button onclick="changePlaybackRate(0.75)">0.75x</button>
                         <button onclick="changePlaybackRate(1)">1x</button>
-                        <button onclick="changePlaybackRate(1.5)">1.5x</button>
-                        <button onclick="changePlaybackRate(2)">2x</button>
                     </div>
                 </div>
             </div>
