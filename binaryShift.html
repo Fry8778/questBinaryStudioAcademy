@@ -1,0 +1,176 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Text Decoder</title>
+</head>
+<body>
+    <div id="result"></div>
+
+    <script>
+        // Исходные данные и функции
+        const Nu = "binary-shift_wrapper__ABjV5";
+        const Fu = "binary-shift_btnWrapper__La+49";
+        const Mu = "11011100 11010001 11011000 10011100 11010001 10010101 01111101 11011000 11111001 10010001 11010001";
+
+        const Uu = function(e) {
+            let t = e.split("");
+            for (let n = 0; n < t.length - 1; n += 2) {
+                let r = t[n];
+                t[n] = t[n + 1];
+                t[n + 1] = r;
+            }
+            return t.join("");
+        };
+
+        const Iu = function(e) {
+            return e.slice(1) + e[0];
+        };
+
+        const Ru = function(e) {
+            return e.split("").reverse().join("");
+        };
+
+        const Vu = function() {
+            const [n, r] = [Mu, function(newVal) {
+                document.getElementById("result").textContent = newVal;
+            }];
+
+            const handleSwapEvenAndOdd = function() {
+                const e = n.split(" ").map(Uu).join(" ");
+                r(e);
+            };
+
+            const handleShiftLeft = function() {
+                const e = n.split(" ").map(Iu).join(" ");
+                r(e);
+            };
+
+            const handleReverse = function() {
+                const e = n.split(" ").map(Ru).join(" ");
+                r(e);
+            };
+
+            handleSwapEvenAndOdd();
+            handleShiftLeft();
+            handleReverse();
+        };
+
+        Vu();
+
+        // Добавляем функции в глобальный контекст
+        globalThis.handleSwapEvenAndOdd = Uu;
+        globalThis.handleShiftLeft = Iu;
+        globalThis.handleReverse = Ru;
+
+    </script>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Binary Shift</title>
+    <style>
+        .binary-shift_wrapper__ABjV5 {
+            font-family: Arial, sans-serif;
+        }
+
+        .binary-shift_btnWrapper__La {
+            margin-top: 10px;
+        }
+
+        .button {
+            margin-right: 10px;
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="binary-shift_wrapper__ABjV5" class="binary-shift_wrapper__ABjV5">
+        <p id="binary-text"></p>
+        <div id="binary-shift_btnWrapper__La" class="binary-shift_btnWrapper__La">
+            <button onclick="reset()">Reset</button>
+            <button onclick="handleSwapEvenAndOdd()">Swap Even and Odd</button>
+            <button onclick="handleShiftLeft()">Shift Left</button>
+            <button onclick="handleReverse()">Reverse</button>
+            <button onclick="handleRepeat()">Repeat</button>
+        </div>
+        <p>Embark on a binary journey, where order and rhythm lead the way. In the console's realm, every move counts.
+            Embrace the pattern of swap, shift, reverse, and repeat. Let the sequence be your guide as you navigate the
+            maze of digits to unlock the hidden path.</p>
+    </div>
+
+    <script>
+        const Nu = "binary-shift_wrapper__ABjV5",
+            Fu = "binary-shift_btnWrapper__La",
+            Mu = "11011100 11010001 11011000 10011100 11010001 10010101 01111101 11011000 11111001 10010001 11010001";
+
+        function Uu(e) {
+            let t = e.split("");
+            for (let n = 0; n < t.length - 1; n += 2) {
+                let r = t[n];
+                t[n] = t[n + 1];
+                t[n + 1] = r;
+            }
+            return t.join("");
+        }
+
+        function Iu(e) {
+            return e.slice(1) + e[0];
+        }
+
+        function Ru(e) {
+            return e.split("").reverse().join("");
+        }
+
+        function Repeatu(e, times) {
+            return Array(times + 1).join(e + " ");
+        }
+
+        function Vu() {
+            var n = Mu;
+            function a() {
+                var e = n.split(" ").map(Uu).join(" ");
+                updateText(e);
+            }
+            function o() {
+                var e = n.split(" ").map(Iu).join(" ");
+                updateText(e);
+            }
+            function i() {
+                var e = n.split(" ").map(Ru).join(" ");
+                updateText(e);
+            }
+            function u() {
+                var e = Repeatu(n, 2); // Repeat the string twice
+                updateText(e.trim());
+            }
+
+            globalThis.handleSwapEvenAndOdd = a;
+            globalThis.handleShiftLeft = o;
+            globalThis.handleReverse = i;
+            globalThis.handleRepeat = u;
+        }
+
+        function updateText(newText) {
+            document.getElementById("binary-text").innerText = newText;
+        }
+
+        function reset() {
+            updateText(Mu);
+        }
+
+        Vu();
+        reset();
+    </script>
+</body>
+
+</html>
