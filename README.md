@@ -1,10 +1,20 @@
-Task 1 answer:
+Task 1 answer: код з файлу decode.js додаємо в консоль та викликаємо. В ньому ми послідовно із затримкою в 500мс викликаємо глобальні методи handleSwapEvenAndOdd(); handleShiftLeft();handleReverse(); В результаті його роботи отримуємо строку бінарних чисел:10011011 10100011 10010011 00011011 10100011 00101011 10111110 10010011 10110111 00100011 10100011. Додаємо її для обробки до файлу binaryShift.html, а саме створюємо const Mu. Проводимо ті самі маніпуляції, що й у попередньому коді, тобто схему заміни, сдвіга, реверса та + виконуємо декодування бінарного коду в текст. Отримаємо після вираз: secret_code.
+Відповідь: secret_code
 
 Task 2 answer:
 
-Task 3 answer: Вимкнути клас .obfuscated-truth_hidden\_\_K8fsi на button REVEL(Відкривати).
+Task 3 answer: вимкнути клас .obfuscated-truth_hidden\_\_K8fsi на button REVEL(Відкривати).
 Повідомлення YnNALXF1ZXN0 розшифровується за допомогою декодера Base64.
 Відповідь: bs@-quest
 
-Task 4 answer: Код з файлу audioSlow.js інтегруємо до сторінки завдання добавляючи його в консоль. Швидкість відтворення аудіо повина становити 0,25x. Після цього у в адресному рядку побачимо https://quest.binary-studio.com/broadcast?base=16&code=723373306E346E6365. Цей код code=723373306E346E6365 розшифровується, як r3s0n4nce.
-Відповідь: r3s0n4nce або ще resonance.
+Task 4 answer: код з файлу audioSlow.js інтегруємо до сторінки завдання добавляючи його в консоль. Швидкість відтворення аудіо повина становити 0,25x. Після цього у в адресному рядку побачимо https://quest.binary-studio.com/broadcast?base=16&code=723373306E346E6365. Цей код code=723373306E346E6365 розшифровується, як r3s0n4nce.
+Відповідь: r3s0n4nce
+
+Task 5 answer: відкриваємо Tools Google Chrome - Sensors:
+Location: Antarctica/Troll; Latitude: 72,0041; Longitude: 2,3206; Time zone ID: Troll Time (TT); Locate: nb-NO;
+Orientation: alpha 180; beta: -90; gamma: 0
+З'являється підказка:
+Эти координаты «2 3 512 512» содержат ключ к пункту назначения. Подумайте за пределами viewBox, и вы найдете ответ.
+Код з файлу antarcticaTroll.js додаємо в консоль та викликаємо.
+З'являється <svg> з пінгвіном та написом Linux
+Відповідь: linux
