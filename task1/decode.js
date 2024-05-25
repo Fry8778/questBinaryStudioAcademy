@@ -44,6 +44,11 @@ function applyTransformations() {
 // Вызов функции для применения трансформаций
 applyTransformations();
 
+
+
+
+
+
 function binaryToText(binaryString) {
   return binaryString
     .split(" ")
